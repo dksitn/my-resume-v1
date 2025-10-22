@@ -9,5 +9,19 @@ h1 {
       這叫做「宣告 (Declaration)」。
       你是在下達指令：「...把它的「顏色 (color)」改成「藍色 (blue)」。」
     */
-    color: blue;
+    color: red;
+}
+
+/* ... h1 的樣式 ... */
+
+/* (R6.2.5) img 選擇器，控制所有 <img> 標籤 */
+img {
+    /* 寬度設定為 150 像素 */
+    width: 150px;
+
+    /* 高度自動等比例縮放 */
+    height: auto;
+
+    /* (可選) 讓大頭貼變「圓形」 */
+    border-radius: 0%;
 }
