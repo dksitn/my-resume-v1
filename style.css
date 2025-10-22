@@ -23,5 +23,5 @@ img {
     height: auto;
 
     /* (可選) 讓大頭貼變「圓形」 */
-    border-radius: 0%;
+    border-radius: 50%;
 }
