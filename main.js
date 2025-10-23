@@ -10,5 +10,5 @@ const profilePic = document.getElementById('profile-pic');
 profilePic.addEventListener('click', function() {
     // 步驟三：「...一旦『點擊』真的發生了，就執行『這個匿名函數 (function)』裡面的程式碼...」
     // (R6.2) 彈出一個「警告 (alert)」視窗，內容是 '你好！'
-    alert('你好！這是沈廷翼的大頭照！');
+    alert('訪客您好！這是沈廷翼的大頭照！');
 }); // <--- addEventListener 結束
