@@ -1,0 +1,12 @@
+{
+  "name": "my-resume-website",
+  "version": "1.0.0",
+  "description": "沈廷翼的履歷網站，用於全端作品集展示。目前為資深流程顧問 & 努力成為AI PM中。",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
