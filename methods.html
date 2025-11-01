@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="沈廷翼的學習哲學：我是如何從零開始，用敏捷思維打造一個全端專案的。">
-    <title>我的學習哲學 - 沈廷翼</title>
+    <meta name="description" content="沈廷翼的「人機協作」核心方法論：AI 是助手，我是架構師。解構我如何設計 AI 輔助，並實踐決策與執行。">
+    <title>我的「人機協作」核心方法論 - 沈廷翼</title>
 
     <script async src="https://www.googtagmanager.com/gtag/js?id=G-TZ5HPBYDWV"></script>
     <script>
@@ -24,7 +24,7 @@
             <span></span>
             <span></span>
         </div>
-        <h1>我的學習哲學：從零到一的實踐</h1>
+        <h1>我的「人機協作」核心方法論：AI 是助手，我是架構師</h1>
         <p>資深流程顧問 & 努力成為AI PM中</p>
     </header>
 
@@ -57,100 +57,123 @@
         <main class="main-content">
             
             <section>
-                <h2>這不只是一個日誌，這是一種方法</h2>
+                <h2>我的核心邏輯：AI 是助手，我是架構師</h2>
                 <p>
-                    如果您不是開發者，點開「Gemini 合作日誌」可能會覺得那只是一長串的技術 Bug 列表。但對我來說，那是一部「<strong>如何從零打造一個全功能網站</strong>」的完整實錄。
+                    「Gemini 合作日誌」是我作為 AI PM 與開發者，如何從零到一建構複雜系統的藍圖。
                 </p>
                 <p>
-                    從無到有打造一個產品（無論是網站還是AI PM的流程）是極度複雜的。最大的敵人就是「過度開發」和「規格混亂」。
+                    我的核心哲學是「<strong>人機協作，而非單靠 AI</strong>」。我（人類）的角色是「PM」與「架構師」，負責提出問題、定義規格、並做出最終決策。
                 </p>
                 <p>
-                    為了戰勝這種混亂，我與我的 AI 導師 (Gemini) 從一開始就採用了「<strong>敏捷 (Agile)</strong>」與「<strong>最小可行產品 (MVP)</strong>」的思維。
+                    因此，我的第一個貢獻，就是**「設計」我的 AI 助手 (Gemini Gem)**，使其成為一個可控、可預期、具備專業能力的協作夥伴。
                 </p>
+                <p>
+                    這套方法論分為三個層次，由「敏捷 (Agile)」流程貫穿始終：
+                </p>
+                <ol>
+                    <li><strong>層次一：協作框架 (我如何「設計」AI)</strong></li>
+                    <li><strong>層次二：決策原則 (我如何「驅動」AI 思考)</strong></li>
+                    <li><strong>層次三：六大執行支柱 (我們如何「協同」實作)</strong></li>
+                </ol>
             </section>
 
             <section>
-                <h3>什麼是敏捷 (Agile) 思維？</h3>
+                <h3>層次一：協作框架 (我如何「設計」AI)</h3>
                 <p>
-                    想像一下，傳統（瀑布式）的做法是試圖「一次設計並蓋好一棟 100 層樓的大樓」。這需要花費一年時間規劃，風險極高，只要地基一錯，全盤皆輸。
+                    我做的第一件事，就是為 AI 建立一個「作業系統」。我將其設計為一個「多角色、有記憶」的系統，而非一個「什麼都懂、問了才答」的聊天機器人。
                 </p>
-                <p>
-                    而「敏捷」的做法是：「<strong>我們先專心蓋好第一層樓 (MVP)</strong>，讓它能住人、能用。然後，我們立刻邀請使用者入住，根據他們的反饋，再來蓋第二層、第三層。」
-                </p>
-                <p>
-                    這套方法能讓我們快速交付價值、快速試錯、並確保我們蓋的每一層樓都是市場所需的。
-                </p>
-            </section>
-
-            <section>
-                <h3>我們如何實踐這趟「遠不止此」的旅程？</h3>
-                <p>「Gemini 合作日誌」中的每一個 V (Version) 版本，就是一次敏捷的「衝刺 (Sprint)」：</p>
-                
                 <ul>
-                    <li><strong>V1.0 (MVP)：</strong> 我們的 MVP 不是一個完美的網站，而是「一個能被看見的 HTML 靜態頁面」。我們先求有，證明我們能部署網站。</li>
-                    
-                    <li><strong>V2.0/V3.0 (迭代)：</strong> 我們嘗試加入後端 (n8n)，但遭遇平台 Bug (Zeabur)。我們沒有卡住，而是**敏捷地決策**，遷移到 Railway 平台，並成功串接資料庫。</li>
-                    
-                    <li><strong>V4.0 (迭代)：</strong> 我們發現 n8n 架構有局限 (CORS/API Key)。我們沒有堅持，而是「回顧 (Review)」並「迭代 (Iterate)」，果斷升級到更專業的後端服務 (Supabase)。</li>
-                    
-                    <li><strong>V5.0-V8.0 (增量開發)：</strong> 在 Supabase 這個穩固的地基上，我們一次只蓋一個功能。例如：「管理員能新增商品 (CRUD)」、「實現圖片上傳 (Storage)」、「只顯示有庫存的商品 (RLS)」。</li>
-
-                    <li><strong>V9.0 (整合)：</strong> 實現訪客「聯繫購買」的功能，將前後端所有功能完美整合。</li>
+                    <li><strong>設計A：R0 專案狀態核心 (Project State Kernel)</strong>
+                        <p><strong>我的貢獻：</strong> 我設計了 `R0` 角色，要求 AI 在內部必須維護一個「單一事實來源 (SSOT)」，用 JSON 格式記住專案的 `project_spec`、`data_schema`、`code_blocks` 等狀態。</p>
+                        <p><strong>協作成果：</strong> 這將 AI 從一個「無狀態」的工具，變成了「有狀態」的專案夥伴。AI 能「記住」我們在 V3.0 決定的資料庫結構，並在 V6.0 拿出來用，實現了真正的「專案記憶」。</p>
+                    </li>
+                    <li><strong>設計B：R-N 角色導向的任務委派 (Role-Oriented Delegation)</strong>
+                        <p><strong>我的貢獻：</strong> 我（PM）不直接對 AI 下令，而是將任務「委派」給我為 AI 設計的「虛擬專家角色」。</p>
+                        <p><strong>協作成果：</strong>
+                            <ul>
+                                <li>當我們面臨「平台選型」時（V4.0），我呼叫 `R4 (架構導師)` 來分析 Supabase 與 n8n 的優劣。</li>
+                                <li>當我們遭遇「程式錯誤」時（V3.0），我呼叫 `R7 (偵錯專家)` 來執行「RCA 根本原因分析」SOP。</li>
+                                <li>當我們討論「數據」時（GA/GTM），我呼叫「數據分析師」角色。</li>
+                            </ul>
+                        </p>
+                    </li>
                 </ul>
             </section>
 
             <section>
-                <h3>GA4 數據分析：我們最新的「敏捷衝刺」</h3>
+                <h3>層次二：決策原則 (我如何「驅動」AI 思考)</h3>
                 <p>
-                    在 V9.0 網站功能完成後，我們開始了最新的衝刺。
+                    有了「協作框架」，我（人類）就可以運用我的「決策原則」，來驅動 AI 進行高效率的思考與分析。
                 </p>
+                <ul>
+                    <li><strong>原則A：數據優先 (Data-First)</strong>
+                        <p><strong>我的決策：</strong> 當「數據可被獲取」時，我們<strong>必須</strong>獲取它，並確保其「乾淨」。</p>
+                        <p><strong>協作成果 (GA/GTM)：</strong> 我決定「必須監測訪客」，AI 助手（數據分析師角色）則提供「如何安裝 GA/GTM」的技術路徑。我接著提出「IP 會變」的質疑，AI 則提供「多層次過濾」的解決方案（IP 篩選、GTM 預覽、瀏覽器外掛）。我（人類）來決策，AI 來執行與分析。</p>
+                    </li>
+                    <li><strong>原則B：費米推理 (Fermi Estimation)</strong>
+                        <p><strong>我的決策：</strong> 當「數據不可被獲取」時（例如預測未來），我會要求 AI 切換至「費米推理模式」，將問題拆解為「邏輯估算」。</p>
+                        <p><strong>協作成果 (AI 影片)：</strong> 我提出「設計 n8n 自動化 AI 影片工作流」的需求。在估算其潛在價值時，我會驅動 AI 將問題拆解為 `(創作者數) x (採用率) x (願付價格)` 來進行邏輯估算，而非浪費時間去「搜尋」一個不存在的答案。</p>
+                    </li>
+                </ul>
+            </section>
+            
+            <section>
+                <h3>層次三：六大執行支柱 (我們如何「協同」實作)</h3>
                 <p>
-                    <strong>問題：</strong>網站雖然上線了，但我就像是「在黑暗中開飛機」，我完全不知道有沒有人來訪？訪客都喜歡什麼？
+                    在「決策」做出後，我們（人類 PM + AI 助手）便進入「敏捷實作」階段。這六大支柱是我們在所有專案中都嚴格遵守的工程紀律：
                 </p>
-
-                <h4>Sprint 1: 「開燈」 (我們的 MVP)</h4>
-                <p>
-                    我們的 MVP 不是「一個完美的數據儀表板」，而是「<strong>先裝上最基礎的追蹤碼 (GA4)，讓我們能看見數字</strong>」。這就是「開燈」，先解決「有沒有人來」的問題。
-                </p>
-                
-                <h4>Sprint 2: 「過濾雜訊」 (我們的 QA)</h4>
-                <p>
-                    燈一開，我們立刻發現了新問題：「這些訪客數字裡，有一大半是我自己測試網站的流量！」如果不處理，這些「雜訊 (Noise)」會讓我做出錯誤決策。
-                </p>
-                <p>
-                    因此，我們的下一個衝刺 (Sprint)，就是建立一套「<strong>內部流量過濾機制</strong>」（我們深入討論的 IP 篩選、瀏覽器外掛等），確保我們看到的是「真實客戶」的數據。
-                </p>
+                <ol>
+                    <li><strong>支柱一：架構選型與優化：</strong>
+                        <p><strong>人機協作：</strong> 我（PM）提出 V4.0 升級需求，`R4 (AI 導師)` 分析 Supabase 的優勢。我（PM）做出「遷移」的最終決策。</p>
+                    </li>
+                    <li><strong>支柱二：資料為核 (Data-First)：</strong>
+                        <p><strong>人機協作：</strong> 我（PM）設計 `products` 與 `customer_contacts` 的業務邏輯，AI 助手協助生成「關聯式資料表」的 SQL 語法與「外鍵」設定。</p>
+                    </li>
+                    <li><strong>支柱三：系統化偵錯 (Systematic Debugging)：</strong>
+                        <p><strong>人機協作：</strong> 我（PM）發現 V3.0 「前端讀取失敗」的現象，`R7 (AI 偵錯)` 提供「隔離變因法」SOP。我（PM）執行 SOP，定位到錯誤在 n8n，`R7 (AI 偵錯)` 接著分析並找出 `First Incoming Item` 的根本原因。</p>
+                    </li>
+                    <li><strong>支柱四：內建倫理與安全 (Ethics & Security by Design)：</strong>
+                        <p><strong>人機協作：</strong> 我（PM）提出「訪客不能寫入資料」的嚴格要求。AI 助手（`R2 安全官`）提供 Supabase RLS (Row Level Security) 的技術實現方案。</p>
+                    </li>
+                    <li><strong>支柱五：本地端開發流程 (Local Development Process)：</strong>
+                        <p><strong>人機協作：</strong> 我（PM）在 VS Code 中編寫程式碼，並執行 `Git` 版控。AI 助手（`R0`）則「記住」我的 `code_blocks`，並在我需要時提供程式碼建議。</p>
+                    </li>
+                    <li><strong>支柱六：雲端架構與服務串接 (Cloud Architecture & Integration)：</strong>
+                        <p><strong>人機協作：</strong> 我（PM）提出 V7.0「履歷」和「商品」必須分離的「架構解耦」策略。`R4 (AI 導師)` 確認這是「微服務」的最佳實踐，並提供 Railway 上「兩個獨立服務」的部署方案與「API 跨站串接」的範例程式碼。</p>
+                    </li>
+                </ol>
             </section>
 
             <section>
-                <h3>✅ 為什麼這套方法論很重要？</h3>
-                <p>這張表格總結了這套方法論（敏捷）如何幫我戰勝了開發中的兩大痛點：</p>
+                <h3>結論：敏捷 (Agile) 是黏合一切的「流程」</h3>
+                <p>
+                    「敏捷」是我們的「元流程」，它讓我們能將這套複雜的「人機協作框架」、「決策原則」與「六大執行支柱」拆解成一個個可管理的「衝刺 (Sprint)」。
+                </p>
+                <p>
+                    這套完整的「<strong>敏捷流程 + 人機協作框架 + 決策原則 + 六大支柱</strong>」方法論，才是我作為 AI PM，能從零到一處理任何複雜專案的真正核心。
+                </p>
                 
                 <table class="responsive-table">
                     <thead>
                         <tr>
-                            <th>您的痛點</th>
+                            <th>痛點</th>
                             <th>傳統瀑布式開發 (Waterfall)</th>
-                            <th>敏捷數據導入法 (Agile)</th>
+                            <th>我的 AI PM 系統方法論</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td data-label="痛點"><strong>過度開發</strong></td>
-                            <td data-label="Waterfall">試圖一次規劃 V1.0 到 V9.0 的所有功能。開發週期長、風險高，可能一半功能是白做的。</td>
-                            <td data-label="Agile">嚴格限制範圍。Sprint 1 只做「一個能動的 V1.0 頁面」。快速上線，用最小成本驗證可行性。</td>
+                            <td data-label="Waterfall">試圖一次規劃 V1.0 到 V9.0 的所有功能與完美架構。</td>
+                            <td data-label="Agile">Sprint 1 (V1.0) 只做「一個能動的頁面」，我（PM）與 AI 協同驗證「支柱五 (本地流程)」。Sprint 2 (V2.0) 再上後端，驗證「支柱一 (架構選型)」與「支柱六 (雲端架構)」。</td>
                         </tr>
                         <tr>
                             <td data-label="痛點"><strong>SPEC 亂開</strong></td>
                             <td data-label="Waterfall">開發 V3.0 到一半，又想加入 V8.0 的圖片上傳，導致架構混亂、時程爆炸。</td>
-                            <td data-label="Agile">建立「待辦清單 (Backlog)」。有新需求（例如 GA），很好，放入清單，等當前 V9.0 衝刺完成後，再排入下一個 Sprint。<strong>絕不</strong>干擾當前工作。</td>
+                            <td data-label="Agile">建立「待辦清單 (Backlog)」。有新需求（例如 GA 數據分析），很好，我（PM）將其放入 Backlog，等當前 V9.0 衝刺完成後，再排入下一個 Sprint。<strong>絕不</strong>干擾當前工作。</td>
                         </tr>
                     </tbody>
                 </table>
-                
-                <p style="margin-top: 1em;">
-                    「Gemini 合作日誌」不僅是我的學習記錄，它更證明了：**再複雜的系統，都可以透過『敏捷』的思維，一步一步、有紀律地被建造出來。**
-                </p>
             </section>
 
         </main> 
