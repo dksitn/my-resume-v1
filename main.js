@@ -1,14 +1,33 @@
+/* R9 V2.0 RWD 最終版 (整合) */
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // --- 漢堡選單 (Sidebar) 點擊邏輯 ---
+    const menuIcon = document.getElementById('hamburger-icon');
+    const sidebar = document.querySelector('.sidebar');
 
-// (R6.2.5 DOM 操作：選取)
-// 步驟一：告訴 JS (大腦)，去「抓取」那個 id 叫做 'profile-pic' 的 HTML 元素
-//         並把它存在一個叫做「profilePic」的「變數 (盒子)」裡。
-const profilePic = document.getElementById('profile-pic');
+    // R7 偵錯: 確保這兩個元素都存在
+    if (menuIcon && sidebar) {
+        
+        // R6: 監聽 ICON 的點擊事件
+        menuIcon.addEventListener('click', function() {
+            // R6: 切換 (Toggle) ICON 自身的 .open class (變成 X)
+            menuIcon.classList.toggle('open');
+            // R6: 切換 (Toggle) Sidebar 的 .open class (滑入/滑出)
+            sidebar.classList.toggle('open');
+        });
 
-// (R6.2.5 事件監聽)
-// 步驟二：在「profilePic」(大頭貼) 上，安裝一個「事件監聽器」
-//         告訴它：「嘿！請你開始『監聽 (listen)』一個『點擊 (click)』事件...」
-profilePic.addEventListener('click', function() {
-    // 步驟三：「...一旦『點擊』真的發生了，就執行『這個匿名函數 (function)』裡面的程式碼...」
-    // (R6.2) 彈出一個「警告 (alert)」視窗，內容是 '你好！'
-    alert('訪客您好！這是沈廷翼的大頭照！');
-}); // <--- addEventListener 結束
+    } else {
+        console.warn('R9 (V2.0) 警告：找不到 #hamburger-icon 或 .sidebar 元素。漢堡選單無法啟用。');
+    }
+
+    // --- 大頭貼點擊 (Profile Pic) 邏輯 ---
+    const profilePic = document.getElementById('profile-pic');
+    if (profilePic) {
+        profilePic.addEventListener('click', function() {
+            alert('訪客您好！這是沈廷翼的大頭照！');
+        });
+    } else {
+        console.warn('R9 (V2.0) 警告：找不到 #profile-pic 元素。');
+    }
+    
+}); // <-- DOMContentLoaded 結束

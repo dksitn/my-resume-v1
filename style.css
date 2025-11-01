@@ -141,3 +141,102 @@ h3 {
     height: auto;
     border-radius: 4px; 
 }
+
+/* ----- R9 V2.0 RWD：漢堡選單 (Hamburger Menu) ----- */
+/* R9 註：請將這整段程式碼，貼到你 style.css 的「最底部」 */
+
+#hamburger-icon {
+    display: none; /* R9: 預設在電腦版(Desktop)隱藏 */
+    width: 30px;
+    height: 25px;
+    position: absolute; /* R9: 釘選在 Header 左上角 */
+    top: 25px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 1001; /* R9: 確保在最上層 */
+}
+
+#hamburger-icon span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: #ffffff; /* R9: 白色線條 */
+    border-radius: 2px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+/* R9: 漢堡選單的三條線 */
+#hamburger-icon span:nth-child(1) { top: 0px; }
+#hamburger-icon span:nth-child(2) { top: 10px; }
+#hamburger-icon span:nth-child(3) { top: 20px; }
+
+/* R9: 漢堡選單 "X" (開啟狀態) */
+#hamburger-icon.open span:nth-child(1) {
+    top: 10px;
+    transform: rotate(135deg);
+}
+#hamburger-icon.open span:nth-child(2) {
+    opacity: 0; /* R9: 中間那條隱藏 */
+    left: -60px;
+}
+#hamburger-icon.open span:nth-child(3) {
+    top: 10px;
+    transform: rotate(-135deg);
+}
+
+
+/* ----- R9 V2.0 RWD：響應式 (Media Query) ----- */
+
+@media (max-width: 768px) {
+    /* R9: 在 768px 寬度以下 (手機/平板) */
+
+    /* 1. 讓 Header 標題稍微置中 (因為 icon 浮動了) */
+    header {
+        text-align: center;
+        padding-left: 50px; /* R9: 避免文字蓋到 icon */
+        position: relative; /* R9: 確保 icon 的 absolute 定位正確 */
+    }
+
+    /* 2. 顯示漢堡選單 */
+    #hamburger-icon {
+        display: block;
+    }
+
+    /* 3. 讓兩欄式佈局變回「單欄」 */
+    .page-container {
+        flex-direction: column; /* R9: 垂直堆疊 */
+        width: 100%;
+        margin: 0;
+        padding: 0 10px; /* R9: 增加手機左右邊距 */
+        box-sizing: border-box; /* R9: 確保 padding 不會超寬 */
+    }
+
+    /* 4. 預設「隱藏」Sidebar */
+    .sidebar {
+        position: fixed; /* R9: 改為固定位置，才能滑出 */
+        left: -250px; /* R9: 預設藏在左邊螢幕外 */
+        top: 0;
+        height: 100vh; /* R9: 佔滿整個螢幕高度 */
+        width: 220px;
+        margin-right: 0;
+        z-index: 1000;
+        transition: left 0.3s ease-in-out; /* R9: 滑動動畫 */
+        overflow-y: auto; /* R9: 如果連結太多，允許捲動 */
+        padding-top: 60px; /* R9: 避免內容被 Header 蓋住 */
+    }
+    
+    /* 5. 當 Sidebar 被 "open" (JS toggle) 時 */
+    .sidebar.open {
+        left: 0; /* R9: 滑入螢幕 */
+    }
+
+    /* 6. 主內容 (main-content) 佔滿全寬 */
+    .main-content {
+        width: auto;
+        margin: 15px 0; /* R9: 在手機上給一點垂直邊距 */
+    }
+}
