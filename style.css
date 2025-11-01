@@ -309,3 +309,29 @@ table.responsive-table th {
     text-align: left;
   }
 }
+
+/* =============================
+   [新增] 響應式圖表樣式
+   ============================= */
+.responsive-diagram {
+    max-width: 100%; /* 最大寬度為父容器的 100% */
+    height: auto;    /* 高度自動調整，保持圖片比例 */
+    display: block;  /* 讓圖片獨立成行，並消除底部多餘空間 */
+    margin: 2em auto; /* 上下邊距 2em，左右自動置中 */
+    border: 1px solid #ddd; /* 增加邊框，讓圖片更突出 */
+    border-radius: 8px; /* 輕微圓角 */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* 增加陰影，提升質感 */
+}
+
+/* 針對較大螢幕，可以設定圖片的最大寬度，避免過大 */
+@media (min-width: 768px) {
+    .responsive-diagram {
+        max-width: 80%; /* 在平板或電腦上，限制圖片最大寬度為 80% */
+    }
+}
+
+@media (min-width: 992px) {
+    .responsive-diagram {
+        max-width: 700px; /* 在大型電腦螢幕上，設定最大寬度為 700px */
+    }
+}
