@@ -82,20 +82,28 @@
                 <p>
                     我做的第一件事，就是為 AI 建立一個「作業系統」。我將其設計為一個「多角色、有記憶」的系統，而非一個「什麼都懂、問了才答」的聊天機器人。
                 </p>
+                <p>
+                    以下是我為 AI 設計的核心角色：
+                </p>
+
+                <h4>角色A：R0 專案狀態核心 (Project State Kernel)</h4>
                 <ul>
-                    <li><strong>設計A：R0 專案狀態核心 (Project State Kernel)</strong>
-                        <p><strong>我的貢獻：</strong> 我設計了 `R0` 角色，要求 AI 在內部必須維護一個「單一事實來源 (SSOT)」，用 JSON 格式記住專案的 `project_spec`、`data_schema`、`code_blocks` 等狀態。</p>
-                        <p><strong>協作成果：</strong> 這將 AI 從一個「無狀態」的工具，變成了「有狀態」的專案夥伴。AI 能「記住」我們在 V3.0 決定的資料庫結構，並在 V6.0 拿出來用，實現了真正的「專案記憶」。</p>
-                    </li>
-                    <li><strong>設計B：R-N 角色導向的任務委派 (Role-Oriented Delegation)</strong>
-                        <p><strong>我的貢獻：</strong> 我（PM）不直接對 AI 下令，而是將任務「委派」給我為 AI 設計的「虛擬專家角色」。</p>
-                        <p><strong>協作成果：</strong>
-                            <ul>
-                                <li>當我們面臨「平台選型」時（V4.0），我呼叫 `R4 (架構導師)` 來分析 Supabase 與 n8n 的優劣。</li>
-                                <li>當我們遭遇「程式錯誤」時（V3.0），我呼叫 `R7 (偵錯專家)` 來執行「RCA 根本原因分析」SOP。</li>
-                                <li>當我們討論「數據」時（GA/GTM），我呼叫「數據分析師」角色。</li>
-                            </ul>
-                        </p>
+                    <li><strong>[一般人說明]</strong> 這就像是 AI 的「<strong>專案秘書</strong>」或「<strong>記憶體</strong>」。</li>
+                    <li><strong>[我的設計]</strong> 我要求 AI 必須在內部維護一個「單一事實來源 (SSOT)」，用 JSON 格式記住專案的完整狀態（例如：`project_spec` 規格、`data_schema` 資料庫綱要、`code_blocks` 程式碼）。</li>
+                    <li><strong>[協作成果]</strong> 這將 AI 從一個「金魚腦」工具，變成了「有狀態」的專案夥伴。AI 能「記住」我們在 V3.0 決定的資料庫結構，並在我開發 V6.0 時拿出來用，實現了真正的「專案記憶」。</li>
+                </ul>
+                
+                <h4>角色B：R-N 角色導向的任務委派 (Role-Oriented Delegation)</h4>
+                <ul>
+                    <li><strong>[一般人說明]</strong> 我不讓 AI「通才」回答，而是將其設計為一個「<strong>專家團隊</strong>」。當我需要時，我會呼叫「特定專家」。</li>
+                    <li><strong>[我的設計]</strong> 我（PM）不直接對 AI 下令，而是將任務「委派」給我為 AI 設計的「虛擬專家角色」。</li>
+                    <li><strong>[協作成果]</strong>
+                        <ul>
+                            <li><strong>`R4 (架構導師)` (技術顧問)：</strong> 當我們在 V2.0 比較 Zeabur 和 Railway 平台，或在 V4.0 評估是否從 n8n 遷移到 Supabase 時，我呼叫 R4 來提供架構決策分析。</li>
+                            <li><strong>`R7 (偵錯專家)` (鑑識科學家)：</strong> 當我們遭遇 Bug 時，我呼叫 R7 來執行「RCA 根本原因分析」SOP。</li>
+                            <li><strong>`R2 (資安官)` (資安稽核員)：</strong> 當我們處理 API Key 或資料權限時，我呼叫 R2 來確保「內建倫理與安全」。</li>
+                            <li><strong>`數據分析師` (數據科學家)：</strong> 當我們討論 GA/GTM 時，我呼叫此角色來提供數據策略。</li>
+                        </ul>
                     </li>
                 </ul>
             </section>
@@ -103,16 +111,29 @@
             <section>
                 <h3>層次二：決策原則 (我如何「驅動」AI 思考)</h3>
                 <p>
-                    有了「協作框架」，我（人類）就可以運用我的「決策原則」，來驅動 AI 進行高效率的思考與分析。
+                    有了這個「專家團隊」，我（人類）就可以運用我的「決策原則」，來驅動 AI 進行高效率的思考與分析。
                 </p>
                 <ul>
                     <li><strong>原則A：數據優先 (Data-First)</strong>
-                        <p><strong>我的決策：</strong> 當「數據可被獲取」時，我們<strong>必須</strong>獲取它，並確保其「乾淨」。</p>
-                        <p><strong>協作成果 (GA/GTM)：</strong> 我決定「必須監測訪客」，AI 助手（數據分析師角色）則提供「如何安裝 GA/GTM」的技術路徑。我接著提出「IP 會變」的質疑，AI 則提供「多層次過濾」的解決方案（IP 篩選、GTM 預覽、瀏覽器外掛）。我（人類）來決策，AI 來執行與分析。</p>
+                        <p><strong>[我的決策]</strong> 當「數據可被獲取」時，我們<strong>必須</strong>獲取它，並確保其「乾淨」。</p>
+                        <p><strong>[協作成果 (GA/GTM)]</strong>
+                            <ol>
+                                <li><strong>我 (PM) 的決策：</strong>「我必須監測有人進來網站」，這啟動了「數據優先」原則。</li>
+                                <li><strong>AI (數據分析師)：</strong> 提供了「安裝 GA/GTM」的技術路徑。</li>
+                                <li><strong>我 (PM) 的人類洞察：</strong> 我立刻提出質疑：「但我換地方換 wifi 不就會 ip 變了?」</li>
+                                <li><strong>AI (數據分析師)：</strong> 根據我的質疑，提供了「多層次過濾」的進階解決方案（IP 篩選、GTM 預覽模式、瀏覽器外掛）。</li>
+                            </ol>
+                            這是一個「人類決策 -> AI 執行 -> 人類洞察 -> AI 優化」的完美協作。
+                        </p>
                     </li>
                     <li><strong>原則B：費米推理 (Fermi Estimation)</strong>
-                        <p><strong>我的決策：</strong> 當「數據不可被獲取」時（例如預測未來），我會要求 AI 切換至「費米推理模式」，將問題拆解為「邏輯估算」。</p>
-                        <p><strong>協作成果 (AI 影片)：</strong> 我提出「設計 n8n 自動化 AI 影片工作流」的需求。在估算其潛在價值時，我會驅動 AI 將問題拆解為 `(創作者數) x (採用率) x (願付價格)` 來進行邏輯估算，而非浪費時間去「搜尋」一個不存在的答案。</p>
+                        <p><strong>[我的決策]</strong> 當「數據不可被獲取」時（例如預測未來），我會要求 AI 切換至「費米推理模式」，將問題拆解為「邏輯估算」。</p>
+                        <p><strong>[協作成果 (AI 影片工作流)]</strong>
+                            <ul>
+                                <li><strong>我 (PM) 的需求：</strong>「評估 n8n 自動化 AI 影片工作流 (n8n -> ChatGPT -> Veo) 的市場潛力」。</li>
+                                <li><strong>AI (費米推理模式)：</strong> 我們無法「搜尋」到答案。AI 會在我的指導下，將問題拆解為 `(全球內容創作者數) x (影片製作比例) x (AI 採用率) x (平均願付價格)` 來進行邏輯估算。</li>
+                            </ul>
+                        </p>
                     </li>
                 </ul>
             </section>
@@ -120,26 +141,36 @@
             <section>
                 <h3>層次三：六大執行支柱 (我們如何「協同」實作)</h3>
                 <p>
-                    在「決策」做出後，我們（人類 PM + AI 助手）便進入「敏捷實作」階段。這六大支柱是我們在所有專案中都嚴格遵守的工程紀律：
+                    在「決策」做出後，我們（人類 PM + AI 助手）便進入「敏捷實作」階段。這六大支柱是我們在所有專案中都嚴格遵守的工程紀律，以下是更詳細的案例：
                 </p>
                 <ol>
                     <li><strong>支柱一：架構選型與優化：</strong>
                         <p><strong>人機協作：</strong> 我（PM）提出 V4.0 升級需求，`R4 (AI 導師)` 分析 Supabase 的優勢。我（PM）做出「遷移」的最終決策。</p>
+                        <p><strong>[更多案例 V2.0]</strong> 我（PM）發現 Zeabur 平台的 Bug，`R4 (AI 導師)` 協助分析並確認平台問題，我（PM）決策遷移至 Railway 平台。</p>
+                        <p><strong>[更多案例 AI 影片]</strong> 我（PM）提出「AI 影片流」的需求，`R4 (AI 導師)` 協助分析並選擇了 `n8n` (流程引擎)、`ChatGPT` (劇本) 和 `Veo2` (渲染) 的技術組合。</p>
                     </li>
                     <li><strong>支柱二：資料為核 (Data-First)：</strong>
-                        <p><strong>人機協作：</strong> 我（PM）設計 `products` 與 `customer_contacts` 的業務邏輯，AI 助手協助生成「關聯式資料表」的 SQL 語法與「外鍵」設定。</p>
+                        <p><strong>人機協作：</strong> 我（PM）設計 `products` 與 `customer_contacts` (V6.1) 的業務邏輯，AI 助手協助生成「關聯式資料表」的 SQL 語法與「外鍵」設定。</p>
+                        <p><strong>[更多案例 V5.6]</strong> 我（PM）提出「需要庫存」的需求，AI 助手協助進行「資料庫綱要演進 (Schema Evolution)」，在 `products` 表上新增了 `quantity` 欄位。</p>
+                        <p><strong>[更多案例 V5.7]</strong> 我（PM）提出「只顯示有庫存的商品」的業務邏輯，AI 助手協助修改了 Supabase 的 `SELECT` 查詢語句。</p>
                     </li>
                     <li><strong>支柱三：系統化偵錯 (Systematic Debugging)：</strong>
                         <p><strong>人機協作：</strong> 我（PM）發現 V3.0 「前端讀取失敗」的現象，`R7 (AI 偵錯)` 提供「隔離變因法」SOP。我（PM）執行 SOP，定位到錯誤在 n8n，`R7 (AI 偵錯)` 接著分析並找出 `First Incoming Item` 的根本原因。</p>
+                        <p><strong>[更多案例 V1.0]</strong> 我（PM）遭遇 `Git command not found`，`R7 (AI 偵錯)` 診斷為「環境變數 (PATH) 錯誤」，並提供了修復指南。</p>
+                        <p><strong>[更多案例 V5.3]</strong> 我（PM）遭遇 `products_pkey` 錯誤，`R7 (AI 偵錯)` 診斷為「資料庫主鍵 (Primary Key) 設錯」，RCA 指出是 `name` 被誤設為 PKey，而非 `id`。</p>
                     </li>
                     <li><strong>支柱四：內建倫理與安全 (Ethics & Security by Design)：</strong>
-                        <p><strong>人機協作：</strong> 我（PM）提出「訪客不能寫入資料」的嚴格要求。AI 助手（`R2 安全官`）提供 Supabase RLS (Row Level Security) 的技術實現方案。</p>
+                        <p><strong>人機協作：</strong> 我（PM）提出「訪客不能寫入資料」的嚴格要求。AI 助手（`R2 安全官`）提供 Supabase RLS (Row Level Security) 的技術實現方案 (V5.8/V6.1)。</p>
+                        <p><strong>[更多案例 V2.1]</strong> 我（PM）準備串接 Notion API，`R2 (AI 安全官)` 立刻發出「API Key 安全儲存」警告，我（PM）決策將 Key 儲存在 n8n 的 Credential 中，絕不暴露在前端程式碼裡。</p>
                     </li>
                     <li><strong>支柱五：本地端開發流程 (Local Development Process)：</strong>
-                        <p><strong>人機協作：</strong> 我（PM）在 VS Code 中編寫程式碼，並執行 `Git` 版控。AI 助手（`R0`）則「記住」我的 `code_blocks`，並在我需要時提供程式碼建議。</p>
+                        <p><strong>人機協作：</strong> 我（PM）在 VS Code 中編寫程式碼，並執行 `Git` 版控。AI 助手（`R0`）則「記住」我的 `code_blocks`。</p>
+                        <p><strong>[更多案例 V1.0]</strong> 我（PM）遭遇 `not a git repository` 錯誤，`R7 (AI 偵錯)` 診斷為「Git 根目錄錯誤」，並指導我（PM）在正確的資料夾下執行指令。</p>
+                        <p><strong>[更多案例 V1.0]</strong> 我（PM）需要在新電腦上工作，AI 助手（`R0`）提供了 `git clone` 與 `git pull` 的SOP，協助我（PM）成功「同步開發環境」。</p>
                     </li>
                     <li><strong>支柱六：雲端架構與服務串接 (Cloud Architecture & Integration)：</strong>
-                        <p><strong>人機協作：</strong> 我（PM）提出 V7.0「履歷」和「商品」必須分離的「架構解耦」策略。`R4 (AI 導師)` 確認這是「微服務」的最佳實踐，並提供 Railway 上「兩個獨立服務」的部署方案與「API 跨站串接」的範例程式碼。</p>
+                        <p><strong>人機協作：</strong> 我（PM）提出 V7.0「履歷」和「商品」必須分離的「架構解耦」策略。`R4 (AI 導師)` 確認這是「微服務」的最佳實踐，並提供 Railway 上「兩個獨立服務」的部署方案。</p>
+                        <p><strong>[更多案例 V3.0]</strong> 我（PM）要實現「跨網站串接」，AI 助手提供了前端 `fetch()` 程式碼，以「API 呼叫」的方式，讓「履歷網站 (前端)」跨站存取「商品服務 (後端)」的資料庫。</p>
                     </li>
                 </ol>
             </section>
