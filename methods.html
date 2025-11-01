@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <meta name="description" content="沈廷翼的「人機協作」核心方法論：AI 是助手，我是架構師。解構我如何設計 AI 輔助，並實踐決策與執行。">
     <title>我的「人機協作」核心方法論 - 沈廷翼</title>
 
@@ -45,11 +46,11 @@
             <nav class="main-nav-links">
                 <h3>網站導覽</h3>
                 <ul>                    
+                    <li><a href="debug_log.html"><b>AI PM方法論</b></a></li>
                     <li><a href="achievements.html">個人專業履歷</a></li>
-                    <li><a href="debug_log.html">Gemini 合作日誌</a></li>
-                    <li><a href="thoughts.html"><b>我的學習心得</b></a></li>
+                    <li><a href="debug_log.html"><b>Gemini 合作日誌</b></a></li>
                     <li><a href="https://puzzles-production-c3fb.up.railway.app/products.html">商品列表</a></li>
-                    <li><a href="index.html">首頁</a></li>
+                    <li><a href="index.html">返回首頁</a></li>
                 </ul>
             </nav>
         </aside>
@@ -124,6 +125,12 @@
                     為實現高效的人機協作，第一步是為 AI 建立一個「作業系統」，將其從一個「問了才答」的聊天機器人，轉變為一個「多角色、有記憶」的專業團隊。
                 </p>
 
+                <img src="images/AI_structure.png" alt="沈廷翼的 AI 協作框架圖 (R0, R4, R7)" class="main-image">
+                <p style="text-align: center; font-style: italic; color: #555; margin-top: -1.5em; margin-bottom: 2em;">
+                    此為筆者設計的「人機協作」系統架構 (Gemini Gem)。
+                </p>
+
+
                 <h4>角色 A：R0 專案狀態核心 (Project State Kernel)</h4>
                 <ul>
                     <li><strong>[一般人說明]</strong> 這相當於為 AI 助手安裝了「<strong>專案記憶體</strong>」與「<strong>專案秘書</strong>」。</li>
@@ -144,6 +151,16 @@
                         </ul>
                     </li>
                 </ul>
+
+                <div class="proof-card" style="margin-top: 2em;">
+                    <h4>[證據] AI 助手 (Gemini Gem) 的原始設計圖</h4>
+                    <p>
+                        這份「程式管理 sheet」是用來管理 AI 角色的「原始碼」與「設計藍圖」，包含了 `R0` 核心、`R4` 導師、`R7` 偵錯等角色的實際提示詞 (Prompts)。
+                    </p>
+                    <a href="YOUR_SHAREABLE_LINK_HERE" class="cta-button secondary" target="_blank" rel="noopener noreferrer">
+                        » 查看「程式管理總表」
+                    </a>
+                </div>
             </section>
 
             <section>
@@ -187,7 +204,7 @@
 
                 <h4>支柱一：架構選型與優化</h4>
                 <ul>
-                    <li><strong>[人機協作]</strong> PM（人類）提出 V4.0 升級需求，`R4 (AI 導師)` 分析 Supabase 的優勢（這也是「原則 A」的實踐）。PM（人類）做出「遷移」的最終決策。</li>
+                    <li><strong>[人機協作]</strong> PM（人類）提出 V4.0 升級需求，`R4 (AI 導師)` 分析 Supabase 的優勢（這也是「原則 A」的實踐）。PM（人類）做出「遷移」的最終決C策。</li>
                     <li><strong>[更多案例 V2.0]</strong> PM 發現 Zeabur 平台的 Bug，`R4 (AI 導師)` 協助分析並確認平台問題，PM 決策遷移至 Railway 平台。</li>
                 </ul>
 
@@ -206,7 +223,7 @@
 
                 <h4>支柱四：內建倫理與安全 (Ethics & Security by Design)</h4>
                 <ul>
-                    <li><strong>[人機協T作]</strong> PM（人類）提出「訪客不能寫入資料」的嚴格要求。`R2 (AI 安全官)` 提供了 Supabase RLS (Row Level Security) 的技術實現方案 (V5.8/V6.1)。</li>
+                    <li><strong>[人機協作]</strong> PM（人類）提出「訪客不能寫入資料」的嚴格要求。`R2 (AI 安全官)` 提供了 Supabase RLS (Row Level Security) 的技術實現方案 (V5.8/V6.1)。</li>
                     <li><strong>[更多案例 V2.1]</strong> PM 準備串接 Notion API，`R2 (AI 安全官)` 立刻發出「API Key 安全儲存」警告，PM 決策將 Key 儲存在 n8n 的 Credential 中，絕不暴露在前端程式碼裡。</li>
                 </ul>
 
