@@ -240,3 +240,72 @@ h3 {
         margin: 15px 0; /* R9: 在手機上給一點垂直邊距 */
     }
 }
+
+/* =============================
+   表格樣式 (Table Styles)
+   ============================= */
+
+/* 基礎表格設定 */
+table.responsive-table {
+  width: 100%;                  /* 寬度 100% */
+  border-collapse: collapse;    /* 合併邊框 (您要的實線效果) */
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* 表頭 (th) 和 儲存格 (td) 的通用樣式 */
+table.responsive-table th,
+table.responsive-table td {
+  border: 1px solid #000;       /* 黑色實線邊框 */
+  padding: 10px 12px;           /* 內距 (上下 10px, 左右 12px) */
+  text-align: left;             /* 文字靠左 */
+}
+
+/* 表頭 (th) 的特定樣式 */
+table.responsive-table th {
+  background-color: #f0f0f0;    /* 表頭淺灰色底色 */
+  font-weight: bold;
+}
+
+/* =============================
+   表格 RWD (手機版)
+   ============================= */
+@media (max-width: 768px) {
+  table.responsive-table {
+    border: 0; /* 在手機上隱藏表格的總外框 */
+  }
+
+  table.responsive-table thead {
+    /* 隱藏電腦版的表頭 */
+    display: none; 
+  }
+
+  table.responsive-table tr {
+    display: block; /* 讓 <tr> 變成塊狀元素 */
+    margin-bottom: 15px;
+    border: 1px solid #000; /* 每個 <tr> 變成一張卡片 */
+  }
+
+  table.responsive-table td {
+    display: block; /* 讓 <td> 變成塊狀元素 */
+    text-align: right; /* 讓內容靠右 */
+    border: none; /* 移除儲存格的邊框 */
+    border-bottom: 1px dotted #ccc; /* 用虛線分隔儲存格內容 */
+    position: relative;
+    padding-left: 50%; /* 創造左邊空間給標籤 */
+  }
+
+  table.responsive-table td:last-child {
+    border-bottom: 0; /* 最後一個儲存格不要虛線 */
+  }
+
+  /* 使用 data-label 屬性來顯示 "表頭" 標籤 */
+  table.responsive-table td[data-label]::before {
+    content: attr(data-label); /* 讀取 data-label 的內容 */
+    position: absolute;
+    left: 10px;
+    padding-right: 10px;
+    font-weight: bold;
+    text-align: left;
+  }
+}
