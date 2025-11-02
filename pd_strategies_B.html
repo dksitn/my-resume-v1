@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="策略報告 B：AIoT Data Fabric 平台策略。應用支柱三：執行可行性與風險前置，解決組織文化衝突與數據治理問題。">
+    <title>策略報告 B：AIoT Data Fabric 平台策略 (支柱三：執行可行性)</title>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TZ5HPBYDWV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-TZ5HPBYDWV');
+    </script>
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f4f4f9; color: #333; }
+        .page-container { display: flex; max-width: 1200px; margin: 0 auto; background: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .sidebar { width: 250px; padding: 20px; background-color: #e9ecef; }
+        .main-content { flex-grow: 1; padding: 40px; }
+        header { text-align: center; padding: 20px; background: #007bff; color: white; }
+        h1, h2, h3, h4 { color: #0056b3; }
+        ul { list-style-type: disc; margin-left: 20px; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background-color: #f0f0f0; }
+        .strategy-section { border-left: 4px solid #007bff; padding-left: 15px; margin-bottom: 30px; }
+        .strategy-section h3 { color: #007bff; }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>策略報告 B：AIoT Data Fabric 平台策略</h1>
+        <p>應用：Gemini Gem 三支柱架構 - 支柱三：執行可行性與風險前置</p>
+    </header>
+
+    <div class="page-container">
+        <aside class="sidebar">
+            <img id="profile-pic" src="images/my-photo.png" alt="產品經理的大頭貼">
+            <div class="contact-info">
+                <h3>策略報告快速導覽</h3>
+                <p>點擊查看各報告的完整推論邏輯與交付物。</p>
+            </div>
+            <hr> 
+            <nav class="main-nav-links">
+                <ul class="strategy-list">                    
+                    <li><a href="pd_strategies_A.html">報告 A (市場破局)</a></li>
+                    <li><a href="pd_strategies_C.html">報告 C (產品價值)</a></li>
+                    <li><a href="pd_strategies_B.html"><b>報告 B (執行治理)</b></a></li>
+                </ul>
+                <hr>
+                <ul>                    
+                    <li><a href="pd_strategies_main.html">策略總覽</a></li>
+                    <li><a href="achievements.html">個人專業履歷</a></li>
+                    <li><a href="index.html">首頁</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <section class="strategy-section">
+                <h2>1. 問題與市場環境解構</h2>
+                <p>建立一個貫穿集團各事業群的 **AIoT 數據平台 (Data Fabric)**，是實現數據資產化和 PaaS 服務的關鍵。然而，專案常死於**非技術風險**：IT 部門（追求敏捷/迭代）和 OT 部門（追求穩定/安全）的文化衝突，以及各事業群將數據視為私有財產的「數據主權」爭議。</p>
+                <hr>
+                
+                <h2>2. 核心推論邏輯 (支柱三應用)</h2>
+                <p>策略必須是**治理文件**，而非單純的技術藍圖。核心在於**將組織風險轉化為產品需求**：</p>
+                <ul>
+                    <li><strong>邏輯 A：</strong> 組織衝突和數據治理是影響平台採用的最大風險。</li>
+                    <li><strong>邏輯 B：</strong> 必須建立**組織邊界**和**治理架構**來緩衝衝突，確保策略能跨部門落地。</li>
+                    <li><strong>邏輯 C：</strong> 將數據主權的擔憂，通過產品功能 **RBAC (Role-Based Access Control)** 和 **數據沙盒** 來解決，讓各部門放心將數據上傳。</li>
+                </ul>
+                <hr>
+
+                <h2>3. 統一策略路線圖 (Risk-First Governance)</h2>
+                <table>
+                    <thead>
+                        <tr><th>策略維度</th><th>策略內容</th><th>關鍵行動</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>**組織治理**</td>
+                            <td>**邊界團隊與治理委員會：** 成立 **IT/OT 邊界團隊**，作為敏捷開發與穩定運維之間的緩衝區。成立 **數據治理委員會**，統一決策數據標準與權限。</td>
+                            <td>確保平台建設獲得高層支持，並解決部門間的潛在摩擦。</td>
+                        </tr>
+                        <tr>
+                            <td>**產品功能**</td>
+                            <td>**RBAC 數據主權解決方案：** 平台核心功能必須內建 **RBAC** 機制，允許數據擁有者精確定義誰可以存取其數據。</td>
+                            <td>將「數據主權」風險，轉化為 **可管理的產品功能**，消除事業群的數據上傳疑慮。</td>
+                        </tr>
+                        <tr>
+                            <td>**執行流程**</td>
+                            <td>**AI 敏捷部署：** 平台應支持 **MaaS (Model-as-a-Service)** 部署管道，允許業務部門在平台上快速測試和部署其 AI 模型。</td>
+                            <td>以 PaaS 形式提供服務，加速集團內部 AI 應用的開發效率。</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <hr>
+
+                <h2>4. 關鍵交付物</h2>
+                <ul>
+                    <li>**AIoT Data Fabric 平台策略簡報大綱** (10 頁)</li>
+                    <li>**IT/OT 整合風險矩陣**：列出潛在衝突、衝擊程度與緩解措施。</li>
+                    <li>**數據治理委員會章程草案**：定義權責範圍與決策流程。</li>
+                </ul>
+            </section>
+        </main> 
+    </div> 
+    
+    <footer>
+        <p>此策略報告為 Gemini Gem 策略委員會的成果。</p>
+    </footer>
+
+</body>
+</html>

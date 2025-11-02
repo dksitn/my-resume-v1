@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="策略報告 C：AI 兆瓦級基礎設施策略。應用支柱二：價值驅動產品設計，解決從客戶TCO反推研發規格的問題。">
+    <title>策略報告 C：AI 兆瓦級基礎設施策略 (支柱二：價值驅動設計)</title>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TZ5HPBYDWV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-TZ5HPBYDWV');
+    </script>
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f4f4f9; color: #333; }
+        .page-container { display: flex; max-width: 1200px; margin: 0 auto; background: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .sidebar { width: 250px; padding: 20px; background-color: #e9ecef; }
+        .main-content { flex-grow: 1; padding: 40px; }
+        header { text-align: center; padding: 20px; background: #007bff; color: white; }
+        h1, h2, h3, h4 { color: #0056b3; }
+        ul { list-style-type: disc; margin-left: 20px; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background-color: #f0f0f0; }
+        .strategy-section { border-left: 4px solid #007bff; padding-left: 15px; margin-bottom: 30px; }
+        .strategy-section h3 { color: #007bff; }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>策略報告 C：AI 兆瓦級基礎設施策略</h1>
+        <p>應用：Gemini Gem 三支柱架構 - 支柱二：價值驅動產品設計</p>
+    </header>
+
+    <div class="page-container">
+        <aside class="sidebar">
+            <img id="profile-pic" src="images/my-photo.png" alt="產品經理的大頭貼">
+            <div class="contact-info">
+                <h3>策略報告快速導覽</h3>
+                <p>點擊查看各報告的完整推論邏輯與交付物。</p>
+            </div>
+            <hr> 
+            <nav class="main-nav-links">
+                <ul class="strategy-list">                    
+                    <li><a href="pd_strategies_A.html">報告 A (市場破局)</a></li>
+                    <li><a href="pd_strategies_C.html"><b>報告 C (產品價值)</b></a></li>
+                    <li><a href="pd_strategies_B.html">報告 B (執行治理)</a></li>
+                </ul>
+                <hr>
+                <ul>                    
+                    <li><a href="pd_strategies_main.html">策略總覽</a></li>
+                    <li><a href="achievements.html">個人專業履歷</a></li>
+                    <li><a href="index.html">首頁</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <section class="strategy-section">
+                <h2>1. 問題與市場環境解構</h2>
+                <p>下一代 AI 伺服器（如 OCP 專案）的功耗已達 100kW 以上，且正在走向 **800V HVDC** 供電和**液冷散熱**。PM 容易陷入被動，僅是將工程師定義的規格填入 MRD。真正的挑戰是：如何證明我們設計的規格，是為客戶的**商業利益**服務，而非為技術而技術。</p>
+                <hr>
+                
+                <h2>2. 核心推論邏輯 (支柱二應用)</h2>
+                <p>PM 的價值在於擔任市場與 R&D 之間的**翻譯官**，核心流程是**從「客戶任務」反推「研發規格」**：</p>
+                <ul>
+                    <li><strong>邏輯 A：</strong> 客戶的終極任務是 **降低 TCO**。在資料中心中，TCO 核心由 **PUE**（能源效率）決定。</li>
+                    <li><strong>邏輯 B：</strong> **PUE < 1.10**（客戶目標）必須被拆解為產品的規格要求。</li>
+                    <li><strong>邏輯 C：</strong> PUE 由 PSU 效率、散熱效率決定。因此，PM 必須在 MRD 中**主動**定義 PSU 效率需達 **98% (Titanium Plus)**，並將 **液冷解決方案** 的熱設計功率（TDP）要求設為高標準。</li>
+                </ul>
+                <hr>
+
+                <h2>3. 統一策略路線圖 (TCO-Driven Specification)</h2>
+                <table>
+                    <thead>
+                        <tr><th>策略維度</th><th>策略內容</th><th>關鍵行動</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>**設計哲學**</td>
+                            <td>**價值驅動**：堅持所有規格都必須與客戶的 TCO 指標掛鉤，並在 MRD 中展示其 ROI。</td>
+                            <td>**Jobs-to-be-Done (JTBD) 應用：** 將「實現最低 PUE」視為主要客戶任務，所有子系統設計都必須向此任務交付結果。</td>
+                        </tr>
+                        <tr>
+                            <td>**MRD 規格定義**</td>
+                            <td>**主動定義頂級規格：** PM 根據 TCO 模型，主動要求 PSU 效率達到業界頂標（如 98% 以上），並將 **800V HVDC 兼容性**列為必須實現的最高規格。</td>
+                            <td>**規格邊界管理：** 明確區分 PM 負責的**「輸入要求」**（如：系統延遲 < 5ms）與工程師負責的**「底層設計」**（如：電路拓撲）。</td>
+                        </tr>
+                        <tr>
+                            <td>**產品藍圖**</td>
+                            <td>**NPI 與 AI 迭代衝突管理：** 採用**模組化設計**，使下一代產品的核心運算與 I/O 模組可快速升級，縮短硬體 NPI 週期，追上 AI 晶片迭代速度。</td>
+                            <td>透過**早期客戶協作（ECE）**，在 EVT 階段就獲取關鍵客戶的反饋。</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <hr>
+
+                <h2>4. 關鍵交付物</h2>
+                <ul>
+                    <li>**AI 兆瓦級基礎設施策略簡報大綱** (10 頁)</li>
+                    <li>**MRD 規格摘要**：明確定義 TCO 導向的硬體規格要求。</li>
+                    <li>**NPI 模組化策略**：包含關鍵路徑、時程相依性與風險緩解的矩陣。</li>
+                </ul>
+            </section>
+        </main> 
+    </div> 
+    
+    <footer>
+        <p>此策略報告為 Gemini Gem 策略委員會的成果。</p>
+    </footer>
+
+</body>
+</html>
