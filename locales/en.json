@@ -1,0 +1,14 @@
+{
+    "header.title": "Ting-Yih Shen's Website",
+    "header.subtitle": "Senior Process Consultant & Aspiring AI PM",
+
+    "sidebar.contact.title": "Contact Info",
+    "sidebar.nav.title": "Site Navigation",
+    "sidebar.nav.achievements": "Professional Resume",
+    "sidebar.nav.methods": "PM Methodologies",
+    "sidebar.nav.debug_log": "Development Log",
+    "sidebar.nav.pd_methods": "Product Strategy Methods",
+    "sidebar.nav.pd_strategies": "Product Strategy Report",
+    "sidebar.nav.product_list": "Product List",
+    "sidebar.nav.home": "Back to Home"
+}
