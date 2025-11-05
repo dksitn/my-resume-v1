@@ -18,18 +18,13 @@
     "main.advantage.title": "Unique Advantages",
     "main.advantage.li1": "Experienced in Generative AI applications and AI retail integration, adept at combining real-world scenarios with data to create new solutions. Holds Generative AI and AI Application Planner certifications, with plans for advanced AI credentials.",
     "main.advantage.li2": "Cross-industry (department stores/finance/consulting/research) and cross-organizational (startup/foundation/firm/MNC) experience, with cross-functional expertise (sustainability/logistics/management/PM/finance/HR). Adept at navigating diverse organizational structures and providing consulting value.",
-    "main.achievements.title": "Project Achievements",
-    "main.achievements.link1": "Click to view 'Professional Resume' (Execution Results)",
-    "main.achievements.link2": "Click to view 'Complete Debug Log with Google Gemini' (Development Journey)",
     "main.skills.title": "Learning Skills (See 'Professional Resume' for details)",
     "main.skills.li1": "Webpage content now changes with browser language",
     "main.skills.li2": "Webpage now adapts to user devices (RWD)",
     "main.skills.li3": "Building human-AI collaboration methodologies and tools",
     "main.management.title": "Code Management (WIP)",
     "main.management.link1": "Code Management Google Sheet",
-    "main.supabase.title": "Building a Simple E-commerce Site with Supabase",
-    "main.supabase.link1": "Click to view the 'dynamically' loaded product list",
-
+   
     "footer.p1": "I am learning to build a dynamic website from scratch under the guidance of my self-built Gemini Gem.",
     "footer.p2": "© The above pages were completed with the assistance of the Gemini Gem developed by Ting-Yih Shen.",
     "footer.p3": "© Server hosted on Railway / Code on Github / VS Code Editor"
