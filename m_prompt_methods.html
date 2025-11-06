@@ -116,13 +116,44 @@
             <section>
                 <h2>三、架構實踐：關注點分離 (Separation of Concerns)</h2>
                 <p>儲存庫結構應體現資料、邏輯和組裝的分離：</p>
-                <ul>
-                    <li>`🧩 components/`：**元件庫 (The Library)**。存放所有可重用的提示詞「功能積木」（例如：`fn_analyze_intent.md`）。</li>
-                    <li>`📜 recipes/`：**組裝配方 (The Build Specs)**。存放 JSON 檔案，*宣告*一個最終的提示詞需要*哪些*元件（例如：`spec_C_abj.json`）。</li>
-                    <li>`📦 compiled_prompts/`：**編譯成品 (The Final Product)**。存放由「組裝器」自動生成的、可立即使用的「巨石型」提示詞。</li>
-                    <li>`🛠️ tools/`：**組裝器 (The Assembler)**。存放 `build_prompt.py` 等工具，負責讀取「配方」並建構「成品」。</li>
-                </ul>
-            </section>
+                
+                <table class="responsive-table">
+                    <thead>
+                        <tr>
+                            <th>目錄路徑 (Path)</th>
+                            <th>角色定位 (Role)</th>
+                            <th>內容說明 (Content Description)</th>
+                            <th>範例 (Example)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="目錄路徑">`🧩 components/`</td>
+                            <td data-label="角色定位">**元件庫 (The Library)**</td>
+                            <td data-label="內容說明">存放所有可重用的提示詞「功能積木」。</td>
+                            <td data-label="範例">`fn_analyze_intent.md`</td>
+                        </tr>
+                        <tr>
+                            <td data-label="目錄路徑">`📜 recipes/`</td>
+                            <td data-label="角色定位">**組裝配方 (The Build Specs)**</td>
+                            <td data-label="內容說明">存放 JSON 檔案，*宣告*一個最終的提示詞需要*哪些*元件。</td>
+                            <td data-label="範例">`spec_C_abj.json`</td>
+                        </tr>
+                        <tr>
+                            <td data-label="目錄路徑">`📦 compiled_prompts/`</td>
+                            <td data-label="角色定位">**編譯成品 (The Final Product)**</td>
+                            <td data-label="內容說明">存放由「組裝器」自動生成的、可立即使用的「巨石型」提示詞。</td>
+                            <td data-label="範例">`prompt_C_abj.md`</td>
+                        </tr>
+                        <tr>
+                            <td data-label="目錄路徑">`🛠️ tools/`</td>
+                            <td data-label="角色定位">**組裝器 (The Assembler)**</td>
+                            <td data-label="內容說明">存放 `build_prompt.py` 等工具，負責讀取「配方」並建構「成品」。</td>
+                            <td data-label="範例">`build_prompt.py`</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </section>
             
             <section>
                 <h2>四、總結：帶來的好處 (Conclusion: The Benefits)</h2>
