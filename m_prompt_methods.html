@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>模組化提示詞管理方法論 (Modular Prompt Management Methodology)</title>
+    <meta name="description" content="將軟體工程原則應用於提示詞管理，實現模組化、重用與高效維護。">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TZ5HPBYDWV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-TZ5HPBYDWV');
+    </script>
+    
+    <link rel="stylesheet" href="style.css"> 
+</head>
+
+<body>
+    <header>
+        <div id="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <h1>模組化提示詞管理方法論</h1>
+        <p>將軟體工程的核心原則應用於提示詞管理</p>
+    </header>
+
+    <div class="page-container">
+
+        <aside class="sidebar">
+            <img id="profile-pic" src="images/my-photo.png" alt="沈廷翼的大頭貼">
+            
+            <div class="contact-info">
+                <h3>聯繫資訊</h3>
+                <p>
+                    Email: <a href="mailto:dksitn@gmail.com">dksitn@gmail.com</a>
+                </p>
+            </div>
+            
+            <hr> 
+            
+            <nav class="main-nav-links">
+                <h3>網站導覽</h3>
+                <ul>
+                    <li><a href="achievements.html">個人專業履歷</a></li>
+                    <li><a href="methods.html">PM方法論</a></li>
+                    <li><a href="cobots.html">AI 協作框架</a></li>
+                    <li><a href="m_prompt_methods.html"><b>模組化提示詞</b></a></li> <li><a href="index.html">返回首頁</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            
+            <section>
+                <h2>一、導論：問題所在 (Introduction: The Problem)</h2>
+                <p>傳統的提示詞工程（Prompt Engineering）將每個提示詞 (Prompt) 視為一個獨立的、巨大的「巨石型 (Monolithic)」文字檔案。這種方法在初期很簡單，但很快會導致管理上的災難：</p>
+                <ul>
+                    <li>**難以維護 (Hard to Maintain):** 更新一個在多個提示詞中使用的「安全規則」時，必須手動修改多個檔案。</li>
+                    <li>**無法重用 (Impossible to Reuse):** 建立新提示詞時，唯一的辦法是「手動複製貼上」現有功能。</li>
+                    <li>**容易出錯 (Error-Prone):** 複製貼上會導致細微差異、遺漏或版本錯亂。</li>
+                </ul>
+                <p>本方法論提出了一個**系統性的解決方案**，將軟體工程的核心原則應用於提示詞管理，實現您所追求的「**交互功能管理**」。</p>
+            </section>
+
+            <section>
+                <h2>二、核心原則 (The Core Principles)</h2>
+                <table class="responsive-table">
+                    <thead>
+                        <tr>
+                            <th>原則</th>
+                            <th>定義與實踐</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="原則">提示詞即程式碼 (PaC)</td>
+                            <td data-label="定義與實踐">提示詞**不是**靜態的純文字，而是動態的「程式碼」。它們必須被儲存在 Git 儲存庫中，有版本、有 Bug、需要被測試和重構。</td>
+                        </tr>
+                        <tr>
+                            <td data-label="原則">模組化與單一職責 (SRP)</td>
+                            <td data-label="定義與實踐">每個「提示詞元件」都應該只負責「一項」明確定義的功能，例如：`fn_analyze_intent.md` 或 `fn_format_json_report.md`。</td>
+                        </tr>
+                        <tr>
+                            <td data-label="原則">關注點分離 (SoC)</td>
+                            <td data-label="定義與實踐">將「資料」、「邏輯」和「組裝」分開。應包含 `components/` (元件庫)、`recipes/` (組裝配方) 和 `compiled_prompts/` (編譯成品) 目錄結構。</td>
+                        </tr>
+                        <tr>
+                            <td data-label="原則">組合優於繼承</td>
+                            <td data-label="定義與實踐">像組裝樂高一樣，將獨立的元件「組合」起來，而不是建立複雜的「基礎提示詞」進行繼承。</td>
+                        </tr>
+                        <tr>
+                            <td data-label="原則">DRY (Don't Repeat Yourself)</td>
+                            <td data-label="定義與實踐">任何一項「功能邏輯」都應該只存在於一個、且唯一的一個地方。優化時只需修改單一檔案。</td>
+                        </tr>
+                        <tr>
+                            <td data-label="原則">宣告式建構</td>
+                            <td data-label="定義與實踐">開發者只編輯 `recipes/` 中的 JSON 檔案來「宣告」需求，而不需手動執行複製貼上（由「組裝器」自動完成）。</td>
+                        </tr>
+                        <tr>
+                            <td data-label="原則">以 SSOT 為核心的介面</td>
+                            <td data-label="定義與實踐">元件之間不直接溝通，而是**透過一個共享的狀態資料庫 (SSOT，即 R0 專案狀態核心)** 進行資訊交換，實現高內聚、低耦合。</td>
+                        </tr>
+                        <tr>
+                            <td data-label="原則">可測試性</td>
+                            <td data-label="定義與實踐">模組化使得單元測試（測試單一元件）和整合測試（測試組合成品）變得容易且可靠。</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section>
+                <h2>三、架構實踐：關注點分離 (Separation of Concerns)</h2>
+                <p>儲存庫結構應體現資料、邏輯和組裝的分離：</p>
+                <ul>
+                    <li>`🧩 components/`：**元件庫 (The Library)**。存放所有可重用的提示詞「功能積木」（例如：`fn_analyze_intent.md`）。</li>
+                    <li>`📜 recipes/`：**組裝配方 (The Build Specs)**。存放 JSON 檔案，*宣告*一個最終的提示詞需要*哪些*元件（例如：`spec_C_abj.json`）。</li>
+                    <li>`📦 compiled_prompts/`：**編譯成品 (The Final Product)**。存放由「組裝器」自動生成的、可立即使用的「巨石型」提示詞。</li>
+                    <li>`🛠️ tools/`：**組裝器 (The Assembler)**。存放 `build_prompt.py` 等工具，負責讀取「配方」並建構「成品」。</li>
+                </ul>
+            </section>
+            
+            <section>
+                <h2>四、總結：帶來的好處 (Conclusion: The Benefits)</h2>
+                <p>採用此方法論，將使您的提示詞資產庫轉變為一個專業的、可擴展的「**功能函式庫 (Function Library)**」。</p>
+                <ul>
+                    <li>**敏捷性 (Agility):** 在幾秒鐘內建立並測試一個新的提示詞組合。</li>
+                    <li>**可維護性 (Maintainability):** 一次修改核心元件，全局所有相關提示詞自動生效。</li>
+                    <li>**可靠性 (Reliability):** 透過 SSOT 介面和單元測試，降低 Bug 風險，提升系統穩定度。</li>
+                </ul>
+            </section>
+
+        </main> </div> <footer>
+        <p>我正在經過我建造的Gemini Gem的指導下，學習如何從零打造動態網站。</p>
+        <p>&copy; 以上專頁，由沈廷翼開發的Gemini Gem 輔助下完成</p>
+        <p>&copy; 專頁伺服器採用 Railway / 程式碼放置於 Github / VS Code 編譯器</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
