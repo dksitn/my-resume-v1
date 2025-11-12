@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="100tools_SaaS 系列產品：夜間安全熱點圖 (S01)。群眾回報與社群驗證的安全地圖服務。">
+    <title>S01 夜間安全熱點圖 - 助人 × 自利開放地圖</title>
+
+    <script async src="https://www.googtagmanager.com/gtag/js?id=G-TZ5HPBYDWV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-TZ5HPBYDWV');
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div id="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <h1>100tools_SaaS 系列產品：S01 夜間安全熱點圖</h1>
+        <p>助人 × 自利開放地圖平台的首個 MVP</p>
+    </header>
+
+    <div class="page-container">
+
+        <aside class="sidebar">
+            <img id="profile-pic" src="images/my-photo.png" alt="沈廷翼的大頭貼">
+            
+            <div class="contact-info">
+                <h3>聯繫資訊</h3>
+                <p>
+                    Email: <a href="mailto:dksitn@gmail.com">dksitn@gmail.com</a>
+                </p>
+            </div>
+            
+            <hr> 
+            
+            <nav class="main-nav-links">
+                <h3>網站導覽</h3>
+                <ul>
+                    <li><a href="100tools_001.html"><b>S01 安全熱點圖 (當前)</b></a></li>
+                    <li><a href="achievements.html">個人專業履歷</a></li>
+                    <li><a href="methods.html">PM方法論</a></li>
+                    <li><a href="debug_log.html">開發日誌</a></li>
+                    <li><a href="pd_methods.html">產品策略方法論</a></li>
+                    <li><a href="pd_strategies_main.html">產品策略報告</a></li>
+                    <li><a href="https://puzzles-production-bbcc.up.railway.app/products.html">商品列表</a></li>
+                    <li><a href="index.html">返回首頁</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            
+            <section>
+                <p>
+                    <a href="index.html"><strong>&laquo; 返回首頁</strong></a> | 
+                    <a href="https://github.com/dksitn/100tools_SaaS" target="_blank"><strong>GitHub 專案連結 (R1)</strong></a>
+                </p>
+            </section>
+            
+            <section>
+                <h2>🗺️ 產品綜述：夜間安全熱點圖 (S01)</h2>
+                <p>
+                    這是我們「助人 × 自利開放地圖平台」的首個 MVP 站型。S01 旨在透過<strong>群眾回報 (Crowdsourcing)</strong> 蒐集夜間不安全事件，並經過嚴格的<strong>社群驗證 (Governance)</strong> 後，在地圖上呈現為可信賴的熱點圖，協助夜歸通勤者、旅人或家長避險。
+                </p>
+            </section>
+
+            <hr>
+
+            <section>
+                <h3>🛡️ 技術骨架與安全保證 (R3/R5)</h3>
+                <p>
+                    本站型建立在 **Supabase (PostgreSQL + RLS)** 的穩固架構之上，保證數據的**安全**與**可擴展性**。
+                </p>
+                <ul>
+                    <li><strong>資料安全 (R5 RLS):</strong> 所有提報數據均受到 **Row Level Security** 嚴格保護。只有經過審核 (Status = 'verified') 的報告，才允許公開讀取。</li>
+                    <li><strong>高權限隔離 (R2):</strong> 後台的審核和信譽分數計算，全部透過 **Edge Functions** 隔離運行，絕不暴露超級金鑰 (`service_role_key`) 於前端。</li>
+                    <li><strong>極致性能 (R3):</strong> 採用 **Next.js (SSG/ISR)** 架構，確保熱點圖的快速載入，同時滿足 Google Core Web Vitals (SEO) 規範。</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>📊 治理與數據品質 (R1)</h3>
+                <p>
+                    S01 透過數據驅動的 **信譽系統**，解決群眾外包最擔心的「惡作劇」和「誤報」問題。
+                </p>
+                <ol>
+                    <li>**灰層 (Grey Status):** 所有新的報告默認為 `'grey'` 狀態，不公開顯示。</li>
+                    <li>**信譽權重:** 只有擁有足夠 `reputation` 分數的貢獻者提交的報告，才能更快進入審核流程。</li>
+                    <li>**變現反哺:** 未來將透過 B2B API 收益，反哺高信譽的貢獻者，形成正向循環。</li>
+                </ol>
+            </section>
+            
+            </main> 
+    </div> 
+    
+    <footer>
+        <p>我正在經過我建造的Gemini Gem的指導下，學習如何從零打造動態網站。</p>
+        <p>&copy; 以上專頁，由沈廷翼開發的Gemini Gem 輔助下完成</p>
+        <p>&copy; 專頁伺服器採用Railway / 程式碼放置於Github / VS Code 編譯器</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
