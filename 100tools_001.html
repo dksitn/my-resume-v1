@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <meta name="description" content="100tools_SaaS 系列產品：夜間安全熱點圖 (S01)。群眾回報與社群驗證的安全地圖服務。">
+    <meta name="description" content="100tools_SaaS 系列產品：夜間安全熱点圖 (S01)。群眾回報與社群驗證的安全地圖服務。">
     <title>S01 夜間安全熱點圖 - 助人 × 自利開放地圖</title>
 
     <script async src="https://www.googtagmanager.com/gtag/js?id=G-TZ5HPBYDWV"></script>
@@ -16,6 +16,36 @@
     </script>
 
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        .readme-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5em 0;
+            font-size: 0.95em;
+        }
+        .readme-table th,
+        .readme-table td {
+            border: 1px solid #dfe2e5; /* 類似 GitHub 的表格邊框顏色 */
+            padding: 8px 12px;
+            text-align: left;
+        }
+        .readme-table th {
+            background-color: #f6f8fa; /* 類似 GitHub 的表頭背景色 */
+            font-weight: 600;
+        }
+        .readme-table tr:nth-child(even) {
+            background-color: #fcfcfc;
+        }
+        /* 讓程式碼片段有基本樣式 */
+        code {
+            font-family: monospace;
+            background-color: #f1f1f1;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+    </style>
 </head>
 
 <body>
@@ -79,28 +109,203 @@
             <section>
                 <h3>🛡️ 技術骨架與安全保證 (R3/R5)</h3>
                 <p>
-                    本站型建立在 **Supabase (PostgreSQL + RLS)** 的穩固架構之上，保證數據的**安全**與**可擴展性**。
+                    本站型建立在 <strong>Supabase (PostgreSQL + RLS)</strong> 的穩固架構之上，保證數據的**安全**與**可擴展性**。
                 </p>
                 <ul>
-                    <li><strong>資料安全 (R5 RLS):</strong> 所有提報數據均受到 **Row Level Security** 嚴格保護。只有經過審核 (Status = 'verified') 的報告，才允許公開讀取。</li>
-                    <li><strong>高權限隔離 (R2):</strong> 後台的審核和信譽分數計算，全部透過 **Edge Functions** 隔離運行，絕不暴露超級金鑰 (`service_role_key`) 於前端。</li>
-                    <li><strong>極致性能 (R3):</strong> 採用 **Next.js (SSG/ISR)** 架構，確保熱點圖的快速載入，同時滿足 Google Core Web Vitals (SEO) 規範。</li>
+                    <li><strong>資料安全 (R5 RLS):</strong> 所有提報數據均受到 <strong>Row Level Security</strong> 嚴格保護。只有經過審核 (Status = 'verified') 的報告，才允許公開讀取。</li>
+                    <li><strong>高權限隔離 (R2):</strong> 後台的審核和信譽分數計算，全部透過 <strong>Edge Functions</strong> 隔離運行，絕不暴露超級金鑰 (<code>service_role_key</code>) 於前端。</li>
+                    <li><strong>極致性能 (R3):</strong> 採用 <strong>Next.js (SSG/ISR)</strong> 架構，確保熱點圖的快速載入，同時滿足 Google Core Web Vitals (SEO) 規範。</li>
                 </ul>
             </section>
 
             <section>
                 <h3>📊 治理與數據品質 (R1)</h3>
                 <p>
-                    S01 透過數據驅動的 **信譽系統**，解決群眾外包最擔心的「惡作劇」和「誤報」問題。
+                    S01 透過數據驅動的 <strong>信譽系統</strong>，解決群眾外包最擔心的「惡作劇」和「誤報」問題。
                 </p>
                 <ol>
-                    <li>**灰層 (Grey Status):** 所有新的報告默認為 `'grey'` 狀態，不公開顯示。</li>
-                    <li>**信譽權重:** 只有擁有足夠 `reputation` 分數的貢獻者提交的報告，才能更快進入審核流程。</li>
+                    <li>**灰層 (Grey Status):** 所有新的報告默認為 <code>'grey'</code> 狀態，不公開顯示。</li>
+                    <li>**信譽權重:** 只有擁有足夠 <code>reputation</code> 分數的貢獻者提交的報告，才能更快進入審核流程。</li>
                     <li>**變現反哺:** 未來將透過 B2B API 收益，反哺高信譽的貢獻者，形成正向循環。</li>
                 </ol>
             </section>
+
+            <hr style="border: 2px solid #000; margin: 40px 0;">
+
+            <section id="project-readme-content">
+
+                <h2>
+                    <span style="font-size: 0.8em; color: #555;">[專案全貌 - README]</span><br>
+                    🗺️ 助人 × 自利開放地圖平台 (Help-and-Earn Open Map Platform)
+                </h2>
+
+                <blockquote>
+                    <p><strong>GitHub 標籤 (Topics) 建議：</strong> <code>nextjs</code> <code>supabase</code> <code>postgresql</code> <code>gis</code> <code>programmatic-seo</code> <code>community-governance</code> <code>maplibre</code> <code>monetization</code></p>
+                </blockquote>
+                
+                <p>一個以「數據治理」和「Programmatic SEO」為核心，旨在量產 100 種「助人 × 自利」站型的通用資料核心。我們將社群的力量結構化，轉化為具備商業價值與社會價值的開放數據服務。</p>
+
+                <hr>
+
+                <h3>🌟 核心價值與產品定位 (R1 One-Pager)</h3>
+
+                <h4>1. 核心哲學：助人 × 自利</h4>
+                <p>我們建立一個可信賴的通用資料核心，用於承載所有基於地理位置或社群回報的數據（Place, Report, Resource）。</p>
+                <ul>
+                    <li><strong>價值鏈：</strong> 低摩擦供稿 → 社群驗證 → 結構化資料 → Programmatic SEO → B2C/B2B 變現 → 反哺供稿者。</li>
+                    <li><strong>北極星指標 (North Star Metric):</strong> <code>verified_reports_per_1k_MAU</code> (每千名月活躍用戶產生的<strong>已驗證報告</strong>數量)。</li>
+                </ul>
+
+                <h4>2. 商業模式 (Monetization)</h4>
+                <p>平台採用多維度變現策略，確保永續營運。</p>
+                <ul>
+                    <li><strong>消費者 (B2C):</strong> Pro alerts, Offline Map, Advanced Filters, CSV Export.</li>
+                    <li><strong>企業用戶 (B2B - SaaS):</strong> District Safety API, Recruiting Dashboard, Trend Dashboard (高價值、高權限數據服務)。</li>
+                    <li><strong>贊助/聯盟 (Sponsor/Affiliate):</strong> Sponsored Pin, Brand Section, Whitelist Ads.</li>
+                </ul>
+
+                <hr>
+
+                <h3>🛠️ 生產級技術架構 (R3 系統思維)</h3>
+                <p>我們的架構採用 <strong>SaaS 級別的解耦式微服務</strong>，專為<strong>性能</strong>和 <strong>Programmatic SEO</strong> 而優化。</p>
+
+                <table class="readme-table">
+                    <thead>
+                        <tr>
+                            <th>服務類別</th>
+                            <th>技術棧 (Tech Stack)</th>
+                            <th>關鍵優勢 (R3 心法)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>前端 & SEO</strong></td>
+                            <td><strong>Next.js (SSG/ISR) on Vercel</strong></td>
+                            <td>極致的 LCP/CLS 性能優化，實現大規模的 <strong>Programmatic SEO</strong> 頁面生成。</td>
+                        </tr>
+                        <tr>
+                            <td><strong>資料庫 (SSOT)</strong></td>
+                            <td><strong>Supabase (PostgreSQL + RLS)</strong></td>
+                            <td>關係型數據模型支持複雜的 <strong>治理邏輯</strong> 和 <strong>PostGIS</strong> 地理空間查詢。是所有社群驗證和信譽系統的唯一真相來源。</td>
+                        </tr>
+                        <tr>
+                            <td><strong>高權限/自動化</strong></td>
+                            <td><strong>Cloudflare/Netlify Edge Functions</strong></td>
+                            <td>承載高權限 API 呼叫、異步同步 (例如：解決 Supabase 免費版休眠問題)。</td>
+                        </tr>
+                        <tr>
+                            <td><strong>搜尋引擎</strong></td>
+                            <td><strong>Meilisearch</strong></td>
+                            <td>提供高速、多維度、即時的全文檢索服務。</td>
+                        </tr>
+                        <tr>
+                            <td><strong>地圖渲染</strong></td>
+                            <td>Leaflet / MapLibre</td>
+                            <td>輕量且開源的地圖渲染解決方案。</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <hr>
+
+                <h3>🛡️ V1.0 衝刺：核心架構與安全實踐</h3>
+                <p>本次衝刺的目標是建立一個可上線、安全的最小可愛產品 (MLP) 基礎。</p>
+
+                <h4>1. 核心功能範疇 (Selected Features)</h4>
+                <p>我們將聚焦於最具社群驗證潛力與地圖剛需的 10 個站型，其中第一個 MVP 將會是：</p>
+                <table class="readme-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>名稱</th>
+                            <th>實體</th>
+                            <th>簡述</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>S01</strong></td>
+                            <td><strong>夜間安全熱點圖</strong></td>
+                            <td>Report</td>
+                            <td>蒐集夜間不安全事件的群眾回報，提供避險與警示。</td>
+                        </tr>
+                        <tr>
+                            <td><strong>V05</strong></td>
+                            <td><strong>插座/Wi-Fi 友善咖啡</strong></td>
+                            <td>Place</td>
+                            <td>標記可久坐工作的咖啡館，是數位遊牧的核心需求。</td>
+                        </tr>
+                        <tr>
+                            <td><strong>C09</strong></td>
+                            <td><strong>產業薪資透明榜</strong></td>
+                            <td>Resource</td>
+                            <td>匿名提交，聚合各產業薪資區間，實現數據透明化。</td>
+                        </tr>
+                        <tr>
+                            <td>...</td>
+                            <td><em>(總計 10 個核心功能)</em></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4>2. 生產級安全重點 (R2/R5)</h4>
+                <ul>
+                    <li><strong>RLS 實施 (核心)：</strong> 所有資料表（<code>Place</code>, <code>Report</code>, <code>User</code>）必須啟用 Supabase 的 <strong>Row Level Security</strong> 政策。確保使用者只能讀取、寫入或修改自己有權限的資料。</li>
+                    <li><strong>金鑰隔離：</strong> 嚴格遵循最小權限原則，將 <strong><code>SUPABASE_SERVICE_ROLE_KEY</code></strong> (高權限金鑰) 僅存放在 <strong>Edge Functions</strong> 的環境變數中，絕不暴露於前端。</li>
+                    <li><strong>廣告法規 (R2)：</strong> 所有付費連結 (Sponsored / Affiliate) 必須包含 <strong><code>rel="sponsored"</code></strong> 屬性，並在介面上進行清晰的<strong>法規揭露</strong>。</li>
+                </ul>
+
+                <hr>
+
+                <h3>🚀 專案路徑圖 (Roadmap)</h3>
+                <table class="readme-table">
+                    <thead>
+                        <tr>
+                            <th>週次</th>
+                            <th>標題</th>
+                            <th>關鍵里程碑</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>W1</strong></td>
+                            <td><strong>內核與架構驗證</strong></td>
+                            <td>通用模型、CI/CD 設定、Supabase RLS 基礎、S01 核心提報流程打通。</td>
+                        </tr>
+                        <tr>
+                            <td><strong>W2</strong></td>
+                            <td><strong>SEO 基礎建置</strong></td>
+                            <td>Programmatic 路由與動態 Meta 標籤實作、Meilisearch 數據同步、GitHub SEO 完善。</td>
+                        </tr>
+                        <tr>
+                            <td><strong>W3</strong></td>
+                            <td><strong>治理系統 v1</strong></td>
+                            <td>信譽/灰層/門檻機制實作、n8n 告警/自動化工作流。</td>
+                        </tr>
+                        <tr>
+                            <td><strong>W4</strong></td>
+                            <td><strong>變現 v1</strong></td>
+                            <td>Pro Alerts, Sponsored Pin, Whitelist Ads 基礎實作。</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <hr>
+
+                <h3>🤝 貢獻指南 (Contribution)</h3>
+                <p>我們歡迎社群的貢獻者加入這個以資料為核心的開放地圖專案。</p>
+                <ol>
+                    <li><strong>資料設計師 (R5):</strong> 幫助優化 <code>ssot_data_model</code> 中的 <code>props{}</code> 和 <code>tags[]</code> 欄位，以適應更多站型。</li>
+                    <li><strong>全端工程師 (R6):</strong> 幫助實作 Next.js 的 Edge Function 或 Supabase Triggers，以增強平台性能。</li>
+                    <li><strong>產品思維者 (R1/R8):</strong> 協助規劃 v2.0 功能 (如國際化、進階變現) 或優化現有站型的 KPI 追蹤。</li>
+                </ol>
+                <p>請先閱讀我們的《<a href="link-to-your-contributing-guideline">[CONTRIBUTING.md]</a>》並在 [Issues] 區提出您的建議或 Bug 回報。</p>
+
+            </section>
             
-            </main> 
+        </main> 
     </div> 
     
     <footer>
