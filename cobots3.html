@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>多模型 × 人類裁決的閉環協作方法論</title>
+    <title>多模型 × 人類裁決的協作框架 3.0（Cobots Framework v3.0）</title>
 
-    <meta name="description" content="一套整合推理、技術、資料與人類裁決的閉環協作方法論。由抽象者、技術者、整合者、人類決策者四角色組成，用於高複雜度的產品開發與跨模型協作工作流。">
+    <meta name="description" content="Cobots Framework v3.0：整合人類決策、多模型推理、技術落地與資料整合的閉環協作方法論。強化 PM 技術補位機制，讓技術不足的 PM 也能正確作出技術決策。">
 
     <link rel="stylesheet" href="style.css">
 </head>
+
 
 <body>
 
@@ -17,14 +18,17 @@
         <span></span><span></span><span></span>
     </div>
 
-    <h1>多模型 × 人類裁決的閉環協作方法論</h1>
-    <p>Unified Cobots Framework v3.0</p>
+    <h1>Cobots Framework v3.0</h1>
+    <p>多模型 × 人類裁決 × 技術補位的閉環協作方法論</p>
 </header>
+
 
 <div class="page-container">
 
+    <!-- SIDEBAR -->
     <aside class="sidebar">
-        <img id="profile-pic" src="images/my-photo.png" alt="Profile Photo">
+
+        <img id="profile-pic" src="images/my-photo.png" alt="Profile">
 
         <div class="contact-info">
             <h3>聯繫資訊</h3>
@@ -38,99 +42,113 @@
             <ul>
                 <li><a href="achievements.html">專業履歷</a></li>
                 <li><a href="methods.html">產品方法論</a></li>
-                <li><a href="cobots.html"><b>協作方法論</b></a></li>
+                <li><a href="co-work2.html">人本協作框架</a></li>
+                <li><a href="cobots.html"><b>AI 協作框架</b></a></li>
                 <li><a href="index.html">返回首頁</a></li>
             </ul>
         </nav>
+
     </aside>
 
 
+    <!-- MAIN CONTENT -->
     <main class="main-content">
 
-        <!-- SECTION 1 -->
+        <!-- Section 1 -->
         <section>
-            <h2>一、方法論定位：用「多模型 × 一人裁決」建立可擴展的協作系統</h2>
+            <h2>一、定位：多模型 × 人類裁決的協同系統</h2>
 
             <p>
-            現代工作不再是「一個 AI 做所有事」，而是人類同時協調多種擅長不同能力的智能模型。
-            本方法論將協作拆成四個角色，形成一個可以持續增強的閉環：
+                Cobots Framework v3.0 是一套整合「人類判斷」與「多模型智能」的閉環協作系統。
+                本框架用於高複雜度的產品、架構、技術決策與專案管理，特別適用於：
             </p>
 
             <ul>
-                <li><strong>抽象者（The Abstractor）：</strong>概念化、推理、方法論、框架。</li>
-                <li><strong>技術者（The Technician）：</strong>程式、架構、落地建構與技術驗證。</li>
-                <li><strong>整合者（The Synthesizer）：</strong>跨格式資料（JSON/CSV/Notion）的記憶管理者。</li>
-                <li><strong>人類裁決者（Human Arbiter）：</strong>選擇、價值、意圖、方向與倫理。</li>
+                <li>PM 技術不足但需主導工程方向時</li>
+                <li>技術快速變動，需要快速學習與判斷時</li>
+                <li>工程、設計、資料跨職能協作時</li>
+                <li>一人公司需要同時扮演多角色時</li>
             </ul>
 
-            <p>四角色構成一個「多模型 × 多格式 × 多層推理」的完整作業系統（Operating Model）。</p>
+            <p>
+                系統由四大角色構成：
+            </p>
+
+            <ul>
+                <li><strong>抽象者（The Abstractor）：</strong>推理、架構、方法論、解釋層</li>
+                <li><strong>技術者（The Technician）：</strong>程式、技術落地、驗證</li>
+                <li><strong>整合者（The Synthesizer）：</strong>資料統整（JSON/CSV/Notion）</li>
+                <li><strong>人類裁決者（Human Arbiter）：</strong>意圖、價值、優先順序、最終決策</li>
+            </ul>
+
         </section>
 
 
-        <!-- SECTION 2 -->
+        <!-- Section 2 -->
         <section>
-            <h2>二、四大角色：理論與實務的統一模型</h2>
+            <h2>二、四大角色：從抽象到落地的完整分工</h2>
 
             <table class="responsive-table">
                 <thead>
                     <tr>
                         <th>角色</th>
-                        <th>職能</th>
+                        <th>職責</th>
                         <th>產出</th>
                     </tr>
                 </thead>
+
                 <tbody>
 
                     <tr>
-                        <td data-label="角色"><strong>抽象者</strong><br>The Abstractor</td>
-                        <td data-label="職能">
+                        <td><strong>抽象者（The Abstractor）</strong></td>
+                        <td>
                             <ul>
-                                <li>定義問題、邊界、目的。</li>
-                                <li>建立方法論、架構、決策流程。</li>
-                                <li>將自然語言轉成可執行任務（Task Structuring）。</li>
-                                <li>進行跨模型抽象推理。</li>
+                                <li>分析問題、重構需求</li>
+                                <li>建立架構與方法論</li>
+                                <li>翻譯跨領域語言（如工程 → 商業語言）</li>
+                                <li>進行推理、決策樹、方案比較</li>
                             </ul>
                         </td>
-                        <td data-label="產出">方法論、架構草稿、規範、指引、抽象模型。</td>
+                        <td>架構草案、流程、推理報告、風險地圖</td>
                     </tr>
 
                     <tr>
-                        <td data-label="角色"><strong>技術者</strong><br>The Technician</td>
-                        <td data-label="職能">
+                        <td><strong>技術者（The Technician）</strong></td>
+                        <td>
                             <ul>
-                                <li>撰寫程式、除錯、建構功能。</li>
-                                <li>測試技術可行性（Feasibility）。</li>
-                                <li>產出可執行成果（前端／後端／API）。</li>
-                                <li>匯出技術資料（如 CSV）。</li>
+                                <li>撰寫程式碼</li>
+                                <li>建構原型（PoC）</li>
+                                <li>除錯、測試、驗證可行性</li>
+                                <li>回報技術限制、成本與時間</li>
                             </ul>
                         </td>
-                        <td data-label="產出">程式碼、功能、技術文件、結構化資料。</td>
+                        <td>程式碼、API、技術文件、CSV 原始資料</td>
                     </tr>
 
                     <tr>
-                        <td data-label="角色"><strong>整合者</strong><br>The Synthesizer</td>
-                        <td data-label="職能">
+                        <td><strong>整合者（The Synthesizer）</strong></td>
+                        <td>
                             <ul>
-                                <li>管理 JSON（邏輯記憶體）。</li>
-                                <li>管理 CSV（資料記憶體）。</li>
-                                <li>維持 Notion / Excel 的資料同步。</li>
-                                <li>確保所有記錄格式一致可追溯（SSOT）。</li>
+                                <li>維護 JSON（邏輯記憶體）</li>
+                                <li>維護 CSV（資料記憶體）</li>
+                                <li>同步 Notion / Excel 狀態</li>
+                                <li>讓多模型與人類的資訊保持一致</li>
                             </ul>
                         </td>
-                        <td data-label="產出">JSON、CSV、決策記錄、Notion 資料庫。</td>
+                        <td>專案記憶（JSON）、表格、版本紀錄</td>
                     </tr>
 
                     <tr>
-                        <td data-label="角色"><strong>人類裁決者</strong><br>Human Arbiter</td>
-                        <td data-label="職能">
+                        <td><strong>人類裁決者（Human Arbiter）</strong></td>
+                        <td>
                             <ul>
-                                <li>定義價值與優先順序。</li>
-                                <li>進行因果判斷，而不是機率判斷。</li>
-                                <li>審核模型輸出並做最終選擇。</li>
-                                <li>啟動下一輪閉環。</li>
+                                <li>定義價值與目的</li>
+                                <li>在多方案間做最終取捨</li>
+                                <li>承擔風險與方向責任</li>
+                                <li>決定下一輪閉環起點</li>
                             </ul>
                         </td>
-                        <td data-label="產出">最終決策、指令、方向、版本更新。</td>
+                        <td>決策、方向、優先順序、版本升級</td>
                     </tr>
 
                 </tbody>
@@ -138,54 +156,139 @@
         </section>
 
 
-        <!-- SECTION 3 -->
+        <!-- Section 3 -->
         <section>
-            <h2>三、閉環循環：由意圖到落地的六步驟</h2>
+            <h2>三、協作閉環：六步驟循環（Closed-loop Cycle）</h2>
 
-            <img src="images/cobots2_cycle.png" alt="Cobots Unified Cycle" class="responsive-diagram">
+            <img src="images/cobots2_cycle.png" class="responsive-diagram"
+                alt="Cobots Closed Loop">
 
             <ol>
-                <li><strong>1. 捕捉（Capture）：</strong>人類輸入意圖、需求、問題。</li>
-                <li><strong>2. 結構（Structure）：</strong>抽象者轉成任務、架構、方法論。</li>
-                <li><strong>3. 構築（Build）：</strong>技術者依結構產出技術成果。</li>
-                <li><strong>4. 紀錄（Record）：</strong>整合者整理成 JSON / CSV / Notion。</li>
-                <li><strong>5. 聚合（Aggregate）：</strong>抽象者抽象化、找模式、產生洞察。</li>
-                <li><strong>6. 裁決（Decide）：</strong>人類決策者選擇下一步，啟動新循環。</li>
+                <li><strong>Capture：</strong>人類捕捉意圖、問題、需求。</li>
+                <li><strong>Structure：</strong>抽象者將意圖結構化成任務、架構、選項。</li>
+                <li><strong>Build：</strong>技術者產生技術成果（程式碼、API、資料）。</li>
+                <li><strong>Record：</strong>整合者更新 JSON/CSV，固定成「可追溯狀態」。</li>
+                <li><strong>Aggregate：</strong>抽象者找模式、總結、推論下一步。</li>
+                <li><strong>Decide：</strong>人類做選擇，再啟動新一輪循環。</li>
             </ol>
 
-            <p>這六步形成一個永不過期的系統，能不斷增強自身能力。</p>
         </section>
 
 
-        <!-- SECTION 4 -->
+        <!-- Section 4 -->
         <section>
-            <h2>四、資料格式：多格式記憶體（JSON × CSV × 自然語言）</h2>
+            <h2>四、PM 技術不足的補位系統（核心強化）</h2>
 
-            <p>整合者角色建立了「三層記憶體」：</p>
+            <p>
+                本版本重點強化：<strong>當 PM 技術能力不足時，AI 如何補位？</strong><br>
+                以下是五層補位架構。
+            </p>
 
+            <h3>1. 教學層（Teaching Layer）— 理解新技術的加速器</h3>
             <ul>
-                <li><strong>JSON：</strong>邏輯、架構、方法論、專案狀態（SSOT）。</li>
-                <li><strong>CSV：</strong>表格資料（任務、紀錄、代碼摘要、進度）。</li>
-                <li><strong>Natural Language：</strong>日誌、敘述、上下文、決策理由。</li>
+                <li>將工程概念用 PM 能理解的語言重寫</li>
+                <li>用故事、比喻、流程圖拆解複雜技術</li>
+                <li>提供 3 種深度版本：初學者 / PM / 技術管理者</li>
+            </ul>
+
+            <h3>2. 翻譯層（Translation Layer）— 工程 ⇄ 產品的雙語轉換</h3>
+            <ul>
+                <li>把 API / schema / code 轉成流程圖、責任圖、資料流</li>
+                <li>把技術風險翻譯成商業語言（成本、速度、可維護性）</li>
+                <li>把工程師的回覆轉成 PM 可決策的資訊格式</li>
+            </ul>
+
+            <h3>3. 推理層（Reasoning Layer）— 幫 PM 補強技術邏輯</h3>
+            <ul>
+                <li>建立選項比較：速度、成本、風險、依賴性、可擴展性</li>
+                <li>生成 Decision Tree、Trade-off Matrix</li>
+                <li>統整風險 → 形成「你應該問工程師的正確問題」</li>
+            </ul>
+
+            <h3>4. 風險層（Risk Layer）— 提醒 PM 技術盲區</h3>
+            <ul>
+                <li>提醒隱藏成本、不易維護區域、工程邊界</li>
+                <li>指出常見技術陷阱（例如同步 / 非同步、IO 限制、DB 索引）</li>
+                <li>檢查 PM 想法是否超出技術可行範圍</li>
+            </ul>
+
+            <h3>5. 藍圖層（Blueprint Layer）— 讓 PM 也能畫系統架構圖</h3>
+            <ul>
+                <li>自動產生：架構圖、模組圖、資料流圖、序列圖</li>
+                <li>讓 PM 能向工程師輸出「清晰的技術想像」</li>
+                <li>變成 PM 與工程師溝通的共同語言</li>
             </ul>
 
             <p>
-                三者共同保證「模型之間、人類之間、工具之間」的資訊永遠一致，
-                使這套方法論可以跨工具、跨時間、跨版本運作。
+                綜合起來：<br>
+                <strong>AI 讓技術不足的 PM 也能做出正確技術決策，  
+                而不是依賴工程師翻譯或等待教學。</strong>
             </p>
+
         </section>
 
 
-        <!-- SECTION 5 -->
+        <!-- Section 5 -->
         <section>
-            <h2>五、方法論總結：統一協作架構（理論 × 實務）</h2>
+            <h2>五、技術協作四柱模型（PM 專用）</h2>
+
+            <p>
+                當 PM 技術不夠時，AI 補位後，PM 仍須掌握以下四大柱子：
+            </p>
 
             <ul>
-                <li>不同模型負責不同層級的推理、技術與資料。</li>
-                <li>人類負責意義、價值、裁決與倫理。</li>
-                <li>所有輸出與記錄以 JSON 為單一事實來源（SSOT）。</li>
-                <li>全流程由「捕捉→結構→構築→紀錄→聚合→裁決」構成閉環。</li>
-                <li>這是個能處理高複雜度工作的一人公司作業系統。</li>
+                <li><strong>Feasibility（可行性）：</strong>這能不能做？需要什麼代價？</li>
+                <li><strong>Scalability（可擴展性）：</strong>大量使用時會炸掉嗎？</li>
+                <li><strong>Maintainability（可維護性）：</strong>會不會變成技術債？</li>
+                <li><strong>Interface Clarity（界面清晰）：</strong>誰用什麼資料？什麼格式？</li>
+            </ul>
+
+            <p>
+                技術≠寫程式，技術是理解「限制」與「代價」。  
+                AI 協助 PM 在短時間內看出限制，讓 PM 能對工程做出明確取捨。
+            </p>
+
+        </section>
+
+
+        <!-- Section 6 -->
+        <section>
+            <h2>六、AI 的價值：補強人類劣勢，而非取代人類角色</h2>
+
+            <p>
+                在本框架中，AI 具有明確定位：<strong>補足人類的弱點，而不是取代人類。</strong>
+            </p>
+
+            <ul>
+                <li>當 PM 技術不足，AI 補位成為技術教練與架構翻譯。</li>
+                <li>當工程資訊太複雜，AI 幫忙做「去雜訊」與結構化。</li>
+                <li>當回顧時資料太散，AI 做跨版本回溯與模式抽取。</li>
+                <li>當團隊出現混亂，AI 協助產生流程、協作界面與角色邊界。</li>
+            </ul>
+
+            <p>
+                AI 的存在價值不是更快，而是讓人類可以：
+            </p>
+
+            <ul>
+                <li>更清楚地思考</li>
+                <li>更快成熟</li>
+                <li>更能看懂技術的邏輯</li>
+                <li>更能做負責任的判斷</li>
+            </ul>
+
+        </section>
+
+
+        <!-- Section 7 -->
+        <section>
+            <h2>七、方法論摘要</h2>
+
+            <ul>
+                <li>Cobots 是一套以「人類裁決」為核心的多模型協作系統。</li>
+                <li>PM 技術不足時，AI 提供教學、翻譯、推理、風險與架構補位。</li>
+                <li>整個流程以閉環方式運作，使每一輪都能讓系統更成熟。</li>
+                <li>AI 協作的目的是讓人類做更好的決策，而不是做更多決策。</li>
             </ul>
 
         </section>
@@ -193,8 +296,9 @@
     </main>
 </div>
 
+
 <footer>
-    <p>本頁展示的是多模型 × 人類裁決的閉環協作方法論（Unified Cobots Framework v3.0）。</p>
+    <p>本頁為 Cobots Framework v3.0（多模型 × 人類裁決 × 技術補位）。</p>
     <p>&copy; All rights reserved.</p>
 </footer>
 
